@@ -57,7 +57,9 @@ class BookSearch(Resource):
             result = [book for book in result if book.published_year == args['published_year']]
         if args['genre']:
             result = [book for book in result if book.genre == args['genre']]
-        return [book.to_dict() for book in result], 200
+        if args['title']:
+            result = [book for book in result if book.title == args['title']]
+            return [book.to_dict() for book in result], 200
 
 
 def initialize_routes(api):
