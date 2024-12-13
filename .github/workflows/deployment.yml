@@ -28,6 +28,7 @@ jobs:
           docker push mysweacrregistryy.azurecr.io/library-api:latest
 
       # Step 4: Deploy the Docker Image to Azure Web App
+
       - name: Deploy to Azure Web App
         run: |
           az webapp config container set -n mylibraryy -g SWE -i mysweacrregistryy.azurecr.io/library-api:latest
