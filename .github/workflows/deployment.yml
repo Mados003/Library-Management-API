@@ -27,7 +27,7 @@ jobs:
           echo ${{ secrets.AZ_ACR_PASSWORD }} | docker login mysweacrregistryy.azurecr.io -u ${{ secrets.AZ_ACR_USERNAME }} --password-stdin
           docker push mysweacrregistryy.azurecr.io/library-api:latest
 
-      # Step 4: Deploy the Docker Image to Azure Web App
+      # Step 4: Deploy the Docker Image to Azure Web Appp
 
       - name: Deploy to Azure Web App
         run: |
